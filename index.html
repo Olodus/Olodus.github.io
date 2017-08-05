@@ -2,50 +2,130 @@
 <head>
 <style>
 body {
-    background-image: url(https://wallpaperscraft.com/image/mountain_sky_lake_peaks_snow_86110_3840x2160.jpg);
-    background-color: #cccccc;
-    background-repeat: no-repeat;
-    background-size: cover;
+    //background-image: url(https://wallpaperscraft.com/image/mountain_sky_lake_peaks_snow_86110_3840x2160.jpg);
+    background-color: white;
+    //background-repeat: no-repeat;
+    //background-size: cover;
     font-family: roboto, sans-serif;
     font-style: normal;
     font-weight: 200;
 }
 h1   {
-    color: white;
+    color: #db3529;
     text-align: center;
 }
 h2   {
-    color: white;
-    text-align: center;
 
 }
-p    {
+h3    {
+    color: #db3529;
+}
+input {
+
+}
+.questioneer   {
     color: white;
+    margin-top: 200px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.question {
+    position: relative;
+    width: 90%;
+    box-shadow: 10px 10px 5px #888888;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #db3529;
+    margin-top: 20px;
+    margin-left: 5%;
+
+}
+.n {
+    border-right: 2px solid;
+    border-color: #db3529;
+    position: absolute;
+    top: 0;
+    width: 10%;
+    color: #db3529;
+    height: 100%;
     text-align: center;
 }
-.l   {
+.q {
+    margin-left: 15%;
+    margin-bottom: 1%;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 10px 10px 5px #888888;
+    width: 100%;
+    background-color: white;
+}
+button {
+    position: fixed;
+    bottom: 2rem;
+    left: 40%;
+    background-color: #db3529;
+    width: 20%;
+    height: 5%;
+    border-radius: 1rem;
+    font-size: 2rem;
     color: white;
-    margin: auto;
-    width: 50%;
 }
 </style>
 </head>
 
 <body>
-    <div>
+    <header>
+        <div>
+            <a href="index.html">Pelorus</a>
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="/about.html">About</a>
+            </li>
+            <li>
+                <a href="/contact.html">Contact</a>
+            </li>
+        </ul>
+    </header>
 
-    <h1>Victors coola site</h1>
-    <h2>Holy shit vilken bra affärside han har</h2>
-    <p>
-        Ideén är modig
-    </p>
-    <p>
-        Ideén är viktig
-    </p>
-    <p>
-        Ideén är awesome
-    </p>
+    <div class="questioneer">
 
+    <h1>Questions</h1>
+
+    <form id="test" action="/result.html" method="get">
+        <div class="question">
+            <div class="n">
+                <h2>1</h2>
+            </div>
+            <div class="q">
+                <h3>How many workers?</h3>
+                <input type="number" name="workers" min="1" max="10" value="1">
+            </div>
+        </div>
+        <div class="question">
+            <div class="n">
+                <h2>2</h2>
+            </div>
+            <div class="q">
+                <h3>Income?</h3>
+                <input type="number" name="income" min="1" max="10" value="1">
+            </div>
+        </div>
+        <div class="question">
+            <div class="n">
+                <h2>3</h2>
+            </div>
+            <div class="q">
+                <h3>Coolness?</h3>
+                <input type="number" name="cool" min="1" max="10" value="1">
+            </div>
+        </div>
+        <button form="test" type="submit">Create result</button>
+    </form>
     </div>
 </body>
 </html>

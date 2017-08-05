@@ -1,0 +1,122 @@
+<html>
+<head>
+<style>
+body {
+    //background-image: url(https://wallpaperscraft.com/image/mountain_sky_lake_peaks_snow_86110_3840x2160.jpg);
+    background-color: white;
+    //background-repeat: no-repeat;
+    //background-size: cover;
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+}
+h1   {
+    color: #db3529;
+    text-align: center;
+}
+h2   {
+    color: #db3529;
+    text-align: center;
+
+}
+p    {
+    color: #db3529;
+    text-align: center;
+}
+.result   {
+    color: white;
+    margin-top: 200px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.diagram {
+    position: relative;
+    margin-left: 40%;
+    height: 50%;
+    background-color: white;
+}
+.staple {
+    width: 3rem;
+    background-color: #db3529;
+    position: absolute;
+    bottom: 0;
+}
+#s1 {
+
+}
+#s2 {
+    margin-left: 4rem;
+}
+#s3 {
+    margin-left: 8rem;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 10px 10px 5px #888888;
+    width: 100%;
+    background-color: white;
+}
+</style>
+
+<script type="text/javascript">
+
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    function setResult() {
+        var s1 = document.getElementById("s1");
+        var s2 = document.getElementById("s2");
+        var s3 = document.getElementById("s3");
+        var workers = parseInt(getParameterByName("workers"));
+        var income = parseInt(getParameterByName("income"));
+        var cool = parseInt(getParameterByName("cool"));
+        s1.style.height = workers+"0%";
+        s2.style.height = income+"0%";
+        s3.style.height = cool+"0%";
+        //var margin = (100-param)
+        //staple.style.marginTop = margin+"0%";
+    }
+
+    window.onload = setResult;
+</script>
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="index.html">Pelorus</a>
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="/about.html">About</a>
+            </li>
+            <li>
+                <a href="/contact.html">Contact</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="result">
+
+    <h1>Resultat</h1>
+    <h2>Vi rekommenderar följande nyckeltal</h2>
+    <div class="diagram">
+        <div class="staple" id="s1"></div>
+        <div class="staple" id="s2"></div>
+        <div class="staple" id="s3"></div>
+    </div>
+
+    </div>
+</body>
+</html>
