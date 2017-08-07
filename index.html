@@ -2,10 +2,7 @@
 <head>
 <style>
 body {
-    //background-image: url(https://wallpaperscraft.com/image/mountain_sky_lake_peaks_snow_86110_3840x2160.jpg);
     background-color: white;
-    //background-repeat: no-repeat;
-    //background-size: cover;
     font-family: roboto, sans-serif;
     font-style: normal;
     font-weight: 200;
@@ -25,7 +22,6 @@ input {
 }
 .questioneer   {
     color: white;
-    //margin-top: 200px;
     width: 100%;
     height: 100%;
     background-color: #1A2E66;
@@ -41,25 +37,10 @@ input {
     margin-left: 5%;
 
 }
-.n {
-    border-right: 2px solid;
-    border-color: #db3529;
-    position: absolute;
-    top: 0;
-    width: 10%;
-    color: #db3529;
-    height: 100%;
-    text-align: center;
-}
-.q {
-    margin-left: 15%;
-    margin-bottom: 1%;
-}
 header {
     position: fixed;
     top: 0;
     left: 0;
-    //box-shadow: 10px 10px 5px #888888;
     width: 100%;
     background-color: #1A2E66;
 }
@@ -136,35 +117,23 @@ button {
             </div>
         </div>
 
-    <form id="test" action="result.html" method="get">
-        <div class="question">
-            <div class="n">
-                <h2>1</h2>
-            </div>
-            <div class="q">
-                <h3>How many workers?</h3>
-                <input type="number" name="workers" min="1" max="10" value="1">
-            </div>
-        </div>
-        <div class="question">
-            <div class="n">
-                <h2>2</h2>
-            </div>
-            <div class="q">
-                <h3>Income?</h3>
-                <input type="number" name="income" min="1" max="10" value="1">
-            </div>
-        </div>
-        <div class="question">
-            <div class="n">
-                <h2>3</h2>
-            </div>
-            <div class="q">
-                <h3>Coolness?</h3>
-                <input type="number" name="cool" min="1" max="10" value="1">
-            </div>
-        </div>
-        <button form="test" type="submit">Create result</button>
+    <form id="q" action="result.html" method="get">
+        <ol class="questions">
+            <li class="question">
+                <label>How many are working at your company?</label>
+                <input type="number" name="workers" min="1" max="10" value="1"/>
+            </li>
+            <li class="question">
+                <label>How much does you company make?</label>
+                <input type="number" name="income" min="1" max="10" value="1"/>
+            </li>
+            <li class="question">
+                <label>How cool is your company?</label>
+                <input type="number" name="cool" min="1" max="10" value="1"/>
+            </li>
+        </ol>
+
+        <button form="q" type="submit">Submit</button>
     </form>
     </div>
 </body>
