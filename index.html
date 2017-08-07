@@ -7,16 +7,60 @@ body {
     font-style: normal;
     font-weight: 200;
 }
-h1   {
-    color: #db3529;
+
+header {
+    position: relative;
+    //top: 0;
+    //left: 0;
+    width: 100%;
+    background-color: #1A2E66;
+    height: 10%;
+    display: inline-block;
+}
+.nav {
+    height: 100%;
+    margin-left: 25%;
+    position: relative;
+}
+.menu {
+    position: absolute;
+    bottom: 10px;
+    list-style-type: none;
+    background-color: #1A2E66;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    //float: left;
+    position: absolute;
+    bottom: 0;
+    margin-left: 5%;
+    //height: 100%;
+    //display: inline-block;
+}
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+}
+.menu-item {
+    display: inline;
+    margin-left: 10%;
+    padding: 10px;
+}
+.menu-item a {
+    color: white;
     text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
-h2   {
-    font-size: 2rem;
+.menu-item:hover {
+    background-color: #162654;
 }
-h3    {
-    color: #db3529;
-}
+
+
 input {
 
 }
@@ -37,13 +81,6 @@ input {
     margin-left: 5%;
 
 }
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1A2E66;
-}
 button {
     position: fixed;
     bottom: 2rem;
@@ -54,6 +91,7 @@ button {
     border-radius: 1rem;
     font-size: 2rem;
     color: white;
+    padding-bottom: 3px;
 }
 .q-icons {
     width: 20%;
@@ -84,17 +122,19 @@ button {
 
 <body>
     <header>
-        <div>
+        <div class="logo">
             <a href="index.html">Pelorus</a>
         </div>
-        <ul class="menu">
-            <li>
-                <a href="about.html">About</a>
-            </li>
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-        </ul>
+        <div class="nav">
+            <ul class="menu">
+                <li class="menu-item" >
+                    <a href="about.html">About</a>
+                </li>
+                <li class="menu-item" >
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <div class="questioneer">
